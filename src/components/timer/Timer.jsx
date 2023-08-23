@@ -8,7 +8,8 @@ const Timer = () => {
   const [minutes, setMinutes] = useState("00");
   const [seconds, setSeconds] = useState("00");
 
-  const countdownDate = localStorage.getItem("countdownDate");
+  const countdownDate = new Date();
+  countdownDate.setDate(countdownDate.getDate() + 8);
 
   const startTimer = () => {
     const intervalId = setInterval(() => {
@@ -34,15 +35,8 @@ const Timer = () => {
   };
 
   useEffect(() => {
-    if (countdownDate) {
-      startTimer();
-    } else {
-      const currentDate = new Date();
-      const sevenDaysLater = new Date(currentDate);
-      sevenDaysLater.setDate(currentDate.getDate() + 8);
-      localStorage.setItem("countdownDate", sevenDaysLater.getTime());
-    }
-  }, [countdownDate]);
+    startTimer();
+  }, []);
 
   return (
     <main className={styles.timer}>

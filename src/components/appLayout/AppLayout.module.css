@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  min-height: 100dvh;
+  min-height: 100vh;
   background-image: linear-gradient(
     var(--very-dark-mostly-black-blue),
     hsl(271.43deg 22.58% 18.24%)
