@@ -1,12 +1,12 @@
 import styles from "./Card.module.css";
 
-function Card() {
+function Card({ title, value }) {
   return (
     <div className={styles["cart-container"]}>
       <div className={styles.card}>
-        <div>22</div>
+        <div>{value < 10 && value !== "00" ? `0${value}` : value}</div>
       </div>
-      <p>Hours</p>
+      <p>{title}</p>
     </div>
   );
 }

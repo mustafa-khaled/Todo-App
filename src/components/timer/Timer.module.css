@@ -10,3 +10,10 @@
     gap: 10px;
   }
 }
+
+@media (max-width: 375px) {
+  .timer {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}

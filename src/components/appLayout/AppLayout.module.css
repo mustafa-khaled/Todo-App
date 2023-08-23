@@ -1,11 +1,11 @@
 .app-layout {
   position: relative;
-  padding-top: 100px;
+  padding: 100px 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-  height: 100dvh;
+  min-height: 100dvh;
   background-image: linear-gradient(
     var(--very-dark-mostly-black-blue),
     hsl(271.43deg 22.58% 18.24%)
