@@ -1,0 +1,25 @@
+.input {
+  background-color: green;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.input > div {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
