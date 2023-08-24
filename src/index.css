@@ -1,21 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  letter-spacing: 3px;
 }
 
 :root {
-  --grayish-blue: hsl(237, 18%, 59%);
-  --soft-red: hsl(345, 95%, 68%);
-  --white: hsl(0, 0%, 100%);
-  --dark-desaturated-blue: hsl(236, 21%, 26%);
-  --very-dark-blue: hsl(235, 16%, 14%);
-  --very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+  --bright-blue: hsl(220, 98%, 61%);
+  --check-background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* ### Light Theme */
+  &,
+  &.light-mode {
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(236, 33%, 92%);
+    --light-grayish-blue: hsl(233, 11%, 84%);
+    --dark-Grayish-blue: hsl(236, 9%, 61%);
+    --very-dark-grayish-blue: hsl(235, 19%, 35%);
+  }
+
+  /* ### Dark Theme */
+  &.dark-mode {
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --light-grayish-blue: hsl(234, 39%, 85%);
+    --light-grayish-blue-hover: hsl(236, 33%, 92%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    --very-dark-grayish-blue: hsl(233, 14%, 35%);
+    --Very-dark-grayish-blue: hsl(237, 14%, 26%);
+  }
 }
 
 body {
-  font-family: "Red Hat Text", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 18px;
 }
