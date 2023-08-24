@@ -4,7 +4,11 @@ function Input() {
   return (
     <div className={styles.input}>
       <div></div>
-      <input type="text" placeholder="Create a new todo" />
+      <input
+        type="text"
+        placeholder="Create a new todo"
+        className={styles["new-todo"]}
+      />
     </div>
   );
 }

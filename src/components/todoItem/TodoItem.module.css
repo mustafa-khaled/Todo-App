@@ -1,0 +1,29 @@
+.todo-item {
+  padding: 15px;
+  border-top: 1px solid var(--three);
+  border-bottom: 1px solid var(--three);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--five);
+}
+
+.todo-item:first-of-type {
+  border-top: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.todo-item:last-of-type {
+  border-bottom: none;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid var(--four);
+  cursor: pointer;
+}
