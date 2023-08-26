@@ -48,19 +48,13 @@ body {
 }
 
 .app main {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  position: relative;
+  top: -20%;
   width: 450px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
 }
 
 @media (max-width: 500px) {

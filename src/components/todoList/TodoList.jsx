@@ -8,9 +8,10 @@ function TodoList() {
 
   return (
     <div className={styles["todo-list"]}>
-      {todos?.map((todo) => {
-        return <TodoItem todo={todo} key={todo.id} />;
-      })}
+      {todos.length > 0 &&
+        todos.map((todo) => {
+          return <TodoItem todo={todo} key={todo.id} />;
+        })}
       <ListFooter />
     </div>
   );
