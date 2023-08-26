@@ -27,9 +27,11 @@ function TodoItem({ todo }) {
         <div
           className={`${styles["checkbox"]} ${
             completed ? styles.completed : ""
-          }`}></div>
+          }`}>
+          {completed ? <i className="fa-solid fa-check"></i> : ""}
+        </div>
 
-        {title}
+        <p className={completed ? styles.completed : ""}>{title}</p>
       </div>
 
       <i className="fa-solid fa-xmark" onClick={handleDeleteClick}></i>

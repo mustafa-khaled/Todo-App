@@ -32,3 +32,7 @@ const todoSlice = createSlice({
 
 export const { addTodo, toggleCompleted, deleteTodo } = todoSlice.actions;
 export default todoSlice.reducer;
+
+// Filter Not Completed Items
+export const getNotCompleted = (state) =>
+  state.todos.filter((todo) => todo.completed === false);

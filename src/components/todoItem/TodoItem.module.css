@@ -16,7 +16,7 @@
   width: 90%;
 }
 
-.todo-item > div.completed {
+.todo-item p.completed {
   text-decoration: line-through;
   color: var(--four);
 }
@@ -32,6 +32,9 @@
 }
 
 .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -42,4 +45,9 @@
 
 .checkbox.completed {
   background: var(--check-background);
+}
+
+.checkbox i {
+  color: var(--one);
+  font-size: 10px;
 }
