@@ -14,7 +14,7 @@
   &,
   &.light-mode {
     --one: hsl(0, 0%, 98%);
-    --two: hsl(236, 33%, 92%);
+    --two: hsl(236deg 100% 97.92%);
     --three: hsl(233, 11%, 84%);
     --four: hsl(236, 9%, 61%);
     --five: hsl(235, 19%, 35%);
@@ -22,17 +22,48 @@
 
   /* ### Dark Theme */
   &.dark-mode {
-    --very-dark-blue: hsl(235, 21%, 11%);
+    --one: hsl(235, 24%, 19%);
+    --two: hsl(235, 21%, 11%);
+    --three: hsl(237, 14%, 26%);
+    /* --very-dark-blue: hsl(235, 21%, 11%);
     --very-dark-desaturated-blue: hsl(235, 24%, 19%);
     --light-grayish-blue: hsl(234, 39%, 85%);
     --light-grayish-blue-hover: hsl(236, 33%, 92%);
     --dark-grayish-blue: hsl(234, 11%, 52%);
     --very-dark-grayish-blue: hsl(233, 14%, 35%);
-    --Very-dark-grayish-blue: hsl(237, 14%, 26%);
+    --Very-dark-grayish-blue: hsl(237, 14%, 26%); */
   }
 }
 
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
+}
+
+/* App Styles */
+.app {
+  height: 100vh;
+  background-color: var(--two);
+}
+
+.app main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@media (max-width: 500px) {
+  .app main {
+    width: 90%;
+  }
 }
