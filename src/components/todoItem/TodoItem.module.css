@@ -4,12 +4,19 @@
   border-bottom: 1px solid var(--three);
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
   cursor: pointer;
   color: var(--five);
 }
 
-.todo-item.completed {
+.todo-item > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 90%;
+}
+
+.todo-item > div.completed {
   text-decoration: line-through;
   color: var(--four);
 }

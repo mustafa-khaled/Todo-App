@@ -1,6 +1,6 @@
-import { toggleCompleted } from "../../redux/todoSlice";
-import styles from "./TodoItem.module.css";
+import { toggleCompleted, deleteTodo } from "../../redux/todoSlice";
 import { useDispatch } from "react-redux";
+import styles from "./TodoItem.module.css";
 
 function TodoItem({ todo }) {
   const { id, title, completed } = todo;
@@ -15,15 +15,24 @@ function TodoItem({ todo }) {
     );
   }
 
+  function handleDeleteClick() {
+    dispatch(deleteTodo({ id: id }));
+  }
+
   return (
-    <div
-      className={`${styles["todo-item"]} ${completed ? styles.completed : ""}`}
-      onClick={handleCompletedClick}>
+    <div className={`${styles["todo-item"]} `}>
       <div
-        className={`${styles["checkbox"]} ${
-          completed ? styles.completed : ""
-        }`}></div>
-      {title}
+        onClick={handleCompletedClick}
+        className={`${completed ? styles.completed : ""}`}>
+        <div
+          className={`${styles["checkbox"]} ${
+            completed ? styles.completed : ""
+          }`}></div>
+
+        {title}
+      </div>
+
+      <i className="fa-solid fa-xmark" onClick={handleDeleteClick}></i>
     </div>
   );
 }
