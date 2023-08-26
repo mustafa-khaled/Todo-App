@@ -1,7 +1,9 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./ListFooter.module.css";
+import { deleteCompleted } from "../../redux/todoSlice";
 
 function ListFooter() {
+  const dispatch = useDispatch();
   // Get List Items
   const listItems = useSelector((state) => state.todos.length);
 
@@ -14,7 +16,9 @@ function ListFooter() {
         <button>Completed</button>
       </div>
       <div>
-        <button>Clear Completed</button>
+        <button onClick={() => dispatch(deleteCompleted())}>
+          Clear Completed
+        </button>
       </div>
     </div>
   );
