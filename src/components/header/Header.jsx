@@ -1,21 +1,15 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import styles from "./Header.module.css";
 import { setTheme } from "../../redux/darkModeSlice";
 import { useEffect } from "react";
-import { useLocalStorageState } from "../../hooks/useLocalStorageState";
-import styles from "./Header.module.css";
 
 function Header() {
+  const isDarkMode = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-  // custom Hook to save dark mode in local storage
-  const [isDarkMode, setIsDarkMode] = useLocalStorageState(
-    window.matchMedia("(prefers-color-scheme: dark)").matches,
-    "darkMode"
-  );
 
-  const handleToggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
+  function handleToggleTheme() {
     dispatch(setTheme(!isDarkMode));
-  };
+  }
 
   useEffect(() => {
     if (isDarkMode) {
