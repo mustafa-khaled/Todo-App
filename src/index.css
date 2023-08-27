@@ -45,13 +45,13 @@ body {
 
 /* App Styles */
 .app {
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--two);
 }
 
 .app main {
   position: relative;
-  top: -20%;
+  top: -160px;
   width: 450px;
   margin: 0 auto;
   display: flex;
