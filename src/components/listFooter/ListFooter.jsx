@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./ListFooter.module.css";
-import { deleteCompletedTodos } from "../../redux/todoSlice";
+import { deleteCompletedTodos, setFilter } from "../../redux/todoSlice";
 
 function ListFooter() {
   const dispatch = useDispatch();
@@ -10,13 +10,26 @@ function ListFooter() {
   function clearCompleted() {
     dispatch(deleteCompletedTodos());
   }
+
+  function allTodos() {
+    dispatch(setFilter("All"));
+  }
+
+  function activeTodos() {
+    dispatch(setFilter("Active"));
+  }
+
+  function completedTodos() {
+    dispatch(setFilter("Completed"));
+  }
+
   return (
     <div className={styles["list-footer"]}>
       <div>{listItems} Item Left</div>
       <div>
-        <button>All</button>
-        <button>Active</button>
-        <button>Completed</button>
+        <button onClick={allTodos}>All</button>
+        <button onClick={activeTodos}>Active</button>
+        <button onClick={completedTodos}>Completed</button>
       </div>
       <div>
         <button onClick={clearCompleted}>Clear Completed</button>
